@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'main.css' %}"> 
+    </head>
+    <body>
+      <h1>FORMS</h1>
+      <p>
+        <form action="{% url 'result' %}">
+          {% csrf_token %}
+          <input type="text" name="user">
+          <input type="submit" value="Submit">
+        </form>
+
+      </p>
+      <p>
+        <a href="{% url 'result' %}">Result</a>
+      </p>
+    
+    
+
+
+
+      <script type="text/javascript" src="{% static 'main.js' %}"></script>
+    </body>
+</html>
